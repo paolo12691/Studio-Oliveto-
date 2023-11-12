@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './navbar/navigation';
+import Carouselpage from './carosello/carouselpage';
+import BasicExample from './counter/basicExample';
+import Footer from './Foot/footer';
+import PrenotazionePage from './navbar/book/prenotazione';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	render() {
+		return (
+			<Router>
+				<div>
+					<Navigation />
+					<Routes>
+						<Route path="/prenotazione" element={<PrenotazionePage />} />
+						<Route path="/" element={<Carouselpage />} />
+						<Route path="/basic-example" element={<BasicExample />} />
+					</Routes>
+					<Footer />
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;

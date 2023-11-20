@@ -1,8 +1,10 @@
 import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBIcon, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faGoogle, faInstagram, faLinkedin, faGithub, faAirbnb } from '@fortawesome/free-brands-svg-icons';
+import image13 from '../imagine/Logo-01.jpg';
 
-
-function Footer() {
+const Footer = () => {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -11,23 +13,22 @@ function Footer() {
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='facebook-f' />
+          <a href='#' className='me-4 text-reset'>
+            <FontAwesomeIcon icon={faFacebookF} />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='twitter' />
+          <a href='#' className='me-4 text-reset'>
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='google' />
+        
+          <a href='https://www.instagram.com/studio_oliveto/' className='me-4 text-reset'>
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='instagram' />
+          <a href='#' className='me-4 text-reset'>
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='linkedin' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='github' />
+         
+          <a href='https://www.airbnb.it/rooms/683369160659067221?adults=1&children=0&enable_m3_private_room=true&infants=0&pets=0&check_in=2024-02-18&check_out=2024-02-23&source_impression_id=p3_1700428333_eYy6ROlcDLpvOLXD&previous_page_section_name=1000&federated_search_id=d43b2982-0822-4b5c-b8e2-ab67567c72a0' className='me-4 text-reset'>
+            <FontAwesomeIcon icon={faAirbnb} />
           </a>
         </div>
       </section>
@@ -37,78 +38,35 @@ function Footer() {
           <MDBRow className='mt-3'>
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon color='secondary' icon='gem' className='me-3' />
-                Company name
+                <img src={image13} alt='Studio Oliveto Logo' className='me-3 footer-logo' style={{ width: '100px' }} />
+                Studio Oliveto
               </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit.
-              </p>
             </MDBCol>
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Useful Links</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  Home
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  React
+                  Ausstattung
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Laravel
-                </a>
-              </p>
-            </MDBCol>
-
-            <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Settings
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Orders
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Help
+                  Impressum
                 </a>
               </p>
             </MDBCol>
 
             <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
-              <p>
-                <MDBIcon color='secondary' icon='home' className='me-2' />
-                New York, NY 10012, US
-              </p>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact Us</h6>
               <p>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                info@example.com
-              </p>
-              <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon color='secondary' icon='print' className='me-3' /> + 01 234 567 89
+                info@studio-oliveto.com
               </p>
             </MDBCol>
           </MDBRow>
@@ -116,12 +74,13 @@ function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-      © Copyright Studio Oliveto All Rights Reserved
+        © Copyright Studio Oliveto All Rights Reserved
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
-           IMPRESSUM
+          IMPRESSUM
         </a>
       </div>
     </MDBFooter>
   );
-}
+};
+
 export default Footer;

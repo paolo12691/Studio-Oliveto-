@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './navbar/navigation';
-import Carouselpage from './carosello/carouselpage';
-import BasicExample from './counter/basicExample';
+import Navigation from './navbar/navigation'; // Assicurati che il percorso sia corretto
 import Footer from './Foot/footer';
 import PrenotazionePage from './navbar/book/prenotazione';
+import HomePage from './homapage/homepage';
 
 class App extends React.Component {
 	render() {
@@ -14,8 +13,7 @@ class App extends React.Component {
 					<Navigation />
 					<Routes>
 						<Route path="/prenotazione" element={<PrenotazionePage />} />
-						<Route path="/" element={<Carouselpage />} />
-						<Route path="/basic-example" element={<BasicExample />} />
+						<Route path="/" element={<HomePage />} />
 					</Routes>
 					<Footer />
 				</div>

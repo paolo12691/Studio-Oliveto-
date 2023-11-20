@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import image1 from '../imagine/imagi1.webp';
-import image2 from '../imagine/imag2.webp';
-import image3 from '../imagine/imag3.webp';
+import { Carousel } from 'react-bootstrap';
+import image1 from '../imagine/foto1.jpg';
+import image2 from '../imagine/foto3.jpg';
+import image3 from '../imagine/foto2.jpg';
 
 function Carouselpage() {
   const [showArrows, setShowArrows] = useState(false);
@@ -36,7 +36,7 @@ function Carouselpage() {
             className="d-block w-100"
             src={image1}
             alt="First slide"
-            style={{ maxWidth: '900px', maxHeight: '500px', width: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', maxHeight: '70vh', width: 'auto', height: 'auto' }}
           />
           <Carousel.Caption style={captionStyle}>
             <h5 style={headingStyle}>Gemütliches Seeblick-Studio</h5>
@@ -49,7 +49,7 @@ function Carouselpage() {
             className="d-block w-100"
             src={image2}
             alt="Second slide"
-            style={{ maxWidth: '900px', maxHeight: '500px', width: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', maxHeight: '70vh', width: 'auto', height: 'auto' }}
           />
           <Carousel.Caption style={captionStyle}>
             <h5 style={headingStyle}>Dach Pool</h5>
@@ -62,7 +62,7 @@ function Carouselpage() {
             className="d-block w-100"
             src={image3}
             alt="Third slide"
-            style={{ maxWidth: '900px', maxHeight: '500px', width: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', maxHeight: '70vh', width: 'auto', height: 'auto' }}
           />
           <Carousel.Caption style={captionStyle}>
             <h5 style={headingStyle}>Ausstattung</h5>
